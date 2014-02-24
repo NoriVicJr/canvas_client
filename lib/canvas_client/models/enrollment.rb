@@ -4,6 +4,10 @@ class Canvas::Enrollment < Canvas::Model
   attribute :user_id, Integer
   attribute :enrollment_state, String
   
+  def student?
+    type == 'StudentEnrollment'
+  end
+  
   def base_url
     File.join 'courses', course_id.to_s, 'enrollments'
   end

@@ -10,8 +10,8 @@ class Canvas::Course < Canvas::Model
   attribute :open_enrollment, Boolean
   attribute :self_enrollment, Boolean
   
-  def enrollments
-    @enrollments ||= Canvas::Enrollment.for_course(self)
+  def students
+    @students ||= Canvas::Enrollment.for_course(self).select &:student?
   end
   
   def self.base_url

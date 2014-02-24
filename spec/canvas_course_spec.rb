@@ -52,4 +52,11 @@ describe Canvas::Course do
     end
   end
   
+  it 'should have students' do
+    VCR.use_cassette 'course enrollments' do
+      course = Canvas::Course.find 2
+      course.students.wont_be_empty
+    end
+  end
+  
 end
