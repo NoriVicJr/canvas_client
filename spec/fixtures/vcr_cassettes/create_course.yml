@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/accounts/1/courses
+    body:
+      encoding: US-ASCII
+      string: course[sis_course_id]=2&course[name]=Intro%20to%20Basketweaving&course[course_code]=BASKET101&course[start_at]=&course[end_at]=&course[offer]=
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer 5h98vhxHhFSF4zkpjN5UCTdATtRDP34ANHaMhSgFSgDihRy1HFXnyg4I4s2bLJ94
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Content-Length:
+      - '142'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Canvas-User-Id:
+      - '1'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - "\"4723735f1e9faac34231d0a3a7e897f7\""
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 222ee1a9f8cc95dbd83c0b7a1c6d78ac
+      X-Request-Context-Id:
+      - 873ce770-7fb2-0131-3f49-542696d0ab77
+      Set-Cookie:
+      - _normandy_session=BAhJIgGlcEVGT05pM1NINThsNi1jeFR3X3RhZy44MWptbjRHNUhJOExaOUlMcEdQUkZsMDA2clRrMzNDa2ZRQnpiNzZFYndCUnEyd1BPYTlRcVQ4U0tqOHhmYXVFRmJsZWNzbW1LdzAxTGpXZXdaQzRhUExCMy12VHdMSUx0Ti1DMFMzSjN6SS5pcXNKbGo0aDBqbzRMLW90QUVHWGJOUFRfdFEuVXd1VWxRBjoGRUY%3D--be0a1187d65d93d729bce3d55658a572b428d1ca;
+        path=/; HttpOnly
+      X-Request-Id:
+      - 677970a233472be29f5121133705d2e6
+      X-Runtime:
+      - '0.669127'
+      Connection:
+      - close
+      Server:
+      - thin 1.5.1 codename Straight Razor
+    body:
+      encoding: UTF-8
+      string: "{\"account_id\":1,\"allow_student_forum_attachments\":false,\"allow_wiki_comments\":null,\"conclude_at\":null,\"course_code\":\"BASKET101\",\"default_view\":\"feed\",\"id\":2,\"is_public\":null,\"license\":null,\"name\":\"Intro
+        to Basketweaving\",\"open_enrollment\":null,\"restrict_enrollments_to_course_dates\":null,\"root_account_id\":1,\"self_enrollment\":null,\"start_at\":null,\"end_at\":null,\"public_syllabus\":false,\"storage_quota_mb\":500,\"hide_final_grades\":false,\"apply_assignment_group_weights\":false,\"calendar\":{\"ics\":\"http://localhost:3000/feeds/calendars/course_95WyE6O2lHZf4LotSq3qF0TfC7NURGr23rB3B8g3.ics\"},\"sis_course_id\":\"2\",\"workflow_state\":\"unpublished\"}"
+    http_version: 
+  recorded_at: Mon, 24 Feb 2014 18:51:01 GMT
+recorded_with: VCR 2.8.0

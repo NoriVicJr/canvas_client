@@ -1,0 +1,115 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/courses/2?
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer 5h98vhxHhFSF4zkpjN5UCTdATtRDP34ANHaMhSgFSgDihRy1HFXnyg4I4s2bLJ94
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Canvas-User-Id:
+      - '1'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - "\"630286be1169f698806d658915b2dbd4\""
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 920367090c2896a03262734677fcca9e
+      X-Request-Context-Id:
+      - fbe35010-7fbf-0131-3f49-542696d0ab77
+      Set-Cookie:
+      - _normandy_session=BAhJIgGlUzB0ODlYTi1uOFFVQnJRUWRYUjl1Zy5UeDIxSW03ck44bXBvWGRHRjZNN0drR3lmVXRaT2JjeVNNa0xzeFRNM1EtZ3A0TC1QeXl0WUhQSFFzQnlFd1Q1bDRQOWVVeWxyMldzVmJPZ2puYTVpOW9uMkdxMWVuVjgzbFBONjZMXzZxRS42MmZLYmlsd3p2LVJxYlp6Q2RlYUNaQmgwLUUuVXd1cktBBjoGRUY%3D--275f1a97d94888912dfce26275e8b4d1c43d1339;
+        path=/; HttpOnly
+      X-Request-Id:
+      - d07778536038c85ec6175518caf6ec0d
+      X-Runtime:
+      - '0.065739'
+      Connection:
+      - close
+      Server:
+      - thin 1.5.1 codename Straight Razor
+    body:
+      encoding: UTF-8
+      string: "{\"account_id\":1,\"course_code\":\"BASKET101\",\"default_view\":\"feed\",\"id\":2,\"name\":\"Intermediate
+        Basketweaving\",\"start_at\":null,\"end_at\":null,\"public_syllabus\":false,\"storage_quota_mb\":500,\"hide_final_grades\":false,\"apply_assignment_group_weights\":false,\"calendar\":{\"ics\":\"http://localhost:3000/feeds/calendars/course_95WyE6O2lHZf4LotSq3qF0TfC7NURGr23rB3B8g3.ics\"},\"sis_course_id\":\"2\",\"enrollments\":[],\"workflow_state\":\"available\"}"
+    http_version: 
+  recorded_at: Mon, 24 Feb 2014 20:27:20 GMT
+- request:
+    method: put
+    uri: http://localhost:3000/api/v1/courses/2
+    body:
+      encoding: US-ASCII
+      string: course[sis_course_id]=2&course[name]=Intermediate%20Basketweaving&course[course_code]=BASKET101&course[start_at]=&course[end_at]=&course[offer]=true
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer 5h98vhxHhFSF4zkpjN5UCTdATtRDP34ANHaMhSgFSgDihRy1HFXnyg4I4s2bLJ94
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Content-Length:
+      - '148'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Canvas-User-Id:
+      - '1'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - "\"35cdcd7c935fb6c3fa2c4edf4a7e7858\""
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 3aaeb5a57b0415df7a223fa178a4860e
+      X-Request-Context-Id:
+      - fbed7370-7fbf-0131-3f49-542696d0ab77
+      Set-Cookie:
+      - _normandy_session=BAhJIgJQATRYYVg0anFrR1puSy04UXVKRi1GZ1EgY2pjM1JyNkU2WG5GZFNwanBJNk9ia2lkTnFpLXhkYkN4dGoyVUk0SF9SMWFSdUd6V1NuR2xKd2c0Vkpib2kyUEV6U2VmUDhtM2E4V1o5TVVmdktCSHZZbmtISUM5U2dlbGwxTUszMnV1LXlkWms1WnMyZjFiYVRyQnRMc2tXdGM5X2dRbUJQYXExMTJOQUFUTTE0N0xTWTNXbUtWVGpJSnRjakNzLUUxbElzaGFaSURVRDR2VmcyZ3JGYnFSdk9VSFRJZ3daRXZ4dk5KOHZnMUlEZG82VjBVV1VaaTRiUGd6amlwbnlSRHRPNHYyNU55ejB5R0xCX2lOSXlGVF9WeW1RY29rdG9pWUtHdDl1Q2RBZGc3SmcuSVFOSjJxNk9uVmJBc3hLN0VyaklPb3lEbXN3LlV3dXJLQQY6BkVG--e8341c52b2e9d44611ab534811c763b3b4451f95;
+        path=/; HttpOnly
+      X-Request-Id:
+      - 33515493d748dd0666307729b974bf4e
+      X-Runtime:
+      - '0.246339'
+      Connection:
+      - close
+      Server:
+      - thin 1.5.1 codename Straight Razor
+    body:
+      encoding: UTF-8
+      string: "{\"account_id\":1,\"course_code\":\"BASKET101\",\"default_view\":\"feed\",\"id\":2,\"name\":\"Intermediate
+        Basketweaving\",\"start_at\":null,\"end_at\":null,\"public_syllabus\":false,\"storage_quota_mb\":500,\"hide_final_grades\":false,\"apply_assignment_group_weights\":false,\"calendar\":{\"ics\":\"http://localhost:3000/feeds/calendars/course_95WyE6O2lHZf4LotSq3qF0TfC7NURGr23rB3B8g3.ics\"},\"sis_course_id\":\"2\",\"workflow_state\":\"available\"}"
+    http_version: 
+  recorded_at: Mon, 24 Feb 2014 20:27:20 GMT
+recorded_with: VCR 2.8.0

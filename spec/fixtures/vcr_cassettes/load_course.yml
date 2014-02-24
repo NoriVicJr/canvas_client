@@ -1,0 +1,58 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/courses/1?
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer 5h98vhxHhFSF4zkpjN5UCTdATtRDP34ANHaMhSgFSgDihRy1HFXnyg4I4s2bLJ94
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Canvas-User-Id:
+      - '1'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - "\"5f09c63c7a5f1d083a5c10e21a7f726c\""
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - c41cc88e68418cd99ef09cc567598f30
+      X-Request-Context-Id:
+      - 7a4f2060-7fa2-0131-3f49-542696d0ab77
+      Set-Cookie:
+      - _normandy_session=BAhJIgGlLS1Tb0M4VGswSXcxankwTmQtUUdmdy4zVXhVWmVGZ3o0VHp2QTRvUEQ1d1hHdHdsRXBXdUtqWlZMMEVkYko2M1NMdkRkTmtxMXVLelczMkdMX1hiSGE5MkFPd2tVcC04ZnV0LUE5Xy11OXFLazBVeFhzTDlySklWb2J0YnBHQ3BBWS5KRkNzYzFqbXRGbEE3MVZTQ2N3eXc3bWdON1UuVXd0NXB3BjoGRUY%3D--7d68f9105390df28e81e74dad9800006cbd307e6;
+        path=/; HttpOnly
+      X-Request-Id:
+      - f3bfd11782f38fd8eeaa4b5d6114facd
+      X-Runtime:
+      - '0.191029'
+      Connection:
+      - close
+      Server:
+      - thin 1.5.1 codename Straight Razor
+    body:
+      encoding: UTF-8
+      string: "{\"account_id\":1,\"course_code\":\"Beginning\",\"default_view\":\"feed\",\"id\":1,\"name\":\"Beginning
+        PE\",\"start_at\":null,\"end_at\":null,\"public_syllabus\":false,\"storage_quota_mb\":500,\"hide_final_grades\":false,\"apply_assignment_group_weights\":false,\"calendar\":{\"ics\":\"http://localhost:3000/feeds/calendars/course_8KK0UHsRM8CIsRzSry1D0xzPu5ap6W7AGLe8y07e.ics\"},\"sis_course_id\":null,\"enrollments\":[{\"type\":\"teacher\",\"role\":\"TeacherEnrollment\"}],\"workflow_state\":\"unpublished\"}"
+    http_version: 
+  recorded_at: Mon, 24 Feb 2014 16:56:07 GMT
+recorded_with: VCR 2.8.0

@@ -22,8 +22,8 @@ class Canvas::Model
   end
   
   def self.find(id)
-    users = client.get(base_url, search_term: id)
-    return users.size == 1 ? new(users.first) : nil
+    record = client.get(resource_url(id))
+    return record.nil? ? nil : new(record)
   end
   
   def save(attributes={})
@@ -33,6 +33,10 @@ class Canvas::Model
 
   def destroy
     client.delete(destroy_url) and !!freeze
+  end
+  
+  def resource_url
+    self.class.resource_url id
   end
   
   
@@ -65,18 +69,26 @@ class Canvas::Model
   end
   
   def self.base_url
-    raise Canvas::Client::ConfigurationError("You need to implement base_url on #{self.class.name}")
+    raise Canvas::Client::ConfigurationError.new("You need to implement base_url on #{self.class_name}")
   end
   
   def base_url
     self.class.base_url
   end
-  alias_method :create_url, :base_url
   
-  def resource_url
+  def create_url
+    base_url
+  end
+  
+  def update_url
+    resource_url
+  end
+  
+  def destroy_url
+    resource_url
+  end
+  
+  def self.resource_url(id)
     File.join base_url, id.to_s
   end
-  alias_method :update_url, :resource_url
-  alias_method :destroy_url, :resource_url
-  
 end

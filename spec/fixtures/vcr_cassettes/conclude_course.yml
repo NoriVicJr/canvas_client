@@ -1,0 +1,112 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/courses/2?
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer 5h98vhxHhFSF4zkpjN5UCTdATtRDP34ANHaMhSgFSgDihRy1HFXnyg4I4s2bLJ94
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Canvas-User-Id:
+      - '1'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - "\"a781c79439ea56c378988c4b750ab24d\""
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - f71623ea4ff7d3a26f4083acd59b1dbe
+      X-Request-Context-Id:
+      - b23aa000-7fb6-0131-3f49-542696d0ab77
+      Set-Cookie:
+      - _normandy_session=BAhJIgGlNjU4dGFRSjJOUnpuR0dVZlNKRDlPUS5LYUUxUnRaMi1mLWdyUFVaTVg3aVU4S1VKVkRUSW05cXhkU1ZnMnVraEVSSHd3ZGF1aWtYa3JsUE1BdmVSZGRQaG5NZDBBaTh4aUJ1RldaQlN2dnBudENLUDNfV3VReEJoZEZFbF96UTNFby5rRm1mSFhmOHRnVWhuLXlSR1dpRWFUQXhyMzguVXd1Ymt3BjoGRUY%3D--bc5add99abc2b999a53905228026cedc62ee9a30;
+        path=/; HttpOnly
+      X-Request-Id:
+      - 305cab28b3253eb67190f86448a4ae99
+      X-Runtime:
+      - '0.063597'
+      Connection:
+      - close
+      Server:
+      - thin 1.5.1 codename Straight Razor
+    body:
+      encoding: UTF-8
+      string: "{\"account_id\":1,\"course_code\":\"BASKET101\",\"default_view\":\"feed\",\"id\":2,\"name\":\"Intermediate
+        Basketweaving\",\"start_at\":null,\"end_at\":null,\"public_syllabus\":false,\"storage_quota_mb\":500,\"hide_final_grades\":false,\"apply_assignment_group_weights\":false,\"calendar\":{\"ics\":\"http://localhost:3000/feeds/calendars/course_95WyE6O2lHZf4LotSq3qF0TfC7NURGr23rB3B8g3.ics\"},\"sis_course_id\":\"2\",\"enrollments\":[],\"workflow_state\":\"unpublished\"}"
+    http_version: 
+  recorded_at: Mon, 24 Feb 2014 19:20:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:3000/api/v1/courses/2?event=conclude
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer 5h98vhxHhFSF4zkpjN5UCTdATtRDP34ANHaMhSgFSgDihRy1HFXnyg4I4s2bLJ94
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Canvas-User-Id:
+      - '1'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - "\"10900fcb757d51f1d2b70437cd298618\""
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 84d0f8eb686ff490098975558b71156f
+      X-Request-Context-Id:
+      - b2453320-7fb6-0131-3f49-542696d0ab77
+      Set-Cookie:
+      - _normandy_session=BAhJIgI6ATV0N25LVHdrUUd2clhuandGOFR2SEEgd3FvZnVWWHNydkJOWmxkNXoya1VzdmpJeGZWNzktWjJTQUZ3dDl2RlcwZkJfWk1hOEJ0bERQS19BRDB1YWJwbVNiQnVLUlAzZDBZZG14YzdnT1hMVnlFcEk1cWd6LXE5Q3QtTElxV1k3dGRjZmNZMDN1N3YyRU9YakFUM0FWT1ZVM2dMZnlJVDVqaWZTeV8yQ2xSaDdvcEYzWVRXTTBVUmJRUWJxYjJ3eFBNbmg5U2JzVjhaYUs5dHlKVjJCS2lXS3hBSmYtVnNMcG85SlhMekQ4V2NmbUljNnV6N3Y3QVJhdjE3R1J1MTFLOVdEWkcxdVczZ2UzRWJkNGQtQ05fSC42VDBiVzFBVHBHNEhmQWh4M25RMUZWZnVUMk0uVXd1Ymt3BjoGRUY%3D--4c38738a906d6a5fb45a4d16cd9182e5e67d67b0;
+        path=/; HttpOnly
+      X-Request-Id:
+      - 58ac50f5e73e58a88d5b1ec28ec90459
+      X-Runtime:
+      - '0.257442'
+      Connection:
+      - close
+      Server:
+      - thin 1.5.1 codename Straight Razor
+    body:
+      encoding: UTF-8
+      string: "{\"conclude\":true}"
+    http_version: 
+  recorded_at: Mon, 24 Feb 2014 19:20:51 GMT
+recorded_with: VCR 2.8.0

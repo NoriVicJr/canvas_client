@@ -5,6 +5,9 @@ module Canvas
 
   class Client
 
+    class ConfigurationError < Exception
+    end
+
     attr_accessor :url, :token, :account
 
     def initialize(url: nil, token: nil, account: nil)
@@ -89,10 +92,6 @@ module Canvas
       end
     end
 
-    class ConfigurationError < Exception
-    end
-
-  
   end
 
 end
