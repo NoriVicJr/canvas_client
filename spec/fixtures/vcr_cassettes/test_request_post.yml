@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/accounts/1/users
+    body:
+      encoding: US-ASCII
+      string: user[name]=Bob%20Martin&user[terms_of_use]=true&pseudonym[unique_id]=bob%40martin.com&pseudonym[sis_user_id]=2&communication_channel[type]=email&communication_channel[address]=bob%40martin.com
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer 5h98vhxHhFSF4zkpjN5UCTdATtRDP34ANHaMhSgFSgDihRy1HFXnyg4I4s2bLJ94
+      Content-Length:
+      - '192'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Canvas-User-Id:
+      - '1'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - "\"b5314f8ac772a2726d8ce9fdd0e91aaf\""
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - c15dca40ed32eb950d20575a331cf12e
+      X-Request-Context-Id:
+      - 1671bcf0-7f2e-0131-49f7-542696d0ab77
+      Set-Cookie:
+      - _normandy_session=BAhJIgGlTDc4WUZxbFNGMWtEYXR5VERoVG82Zy43OXFuSHZrSHc0SUtKU2xjdGk3NlE1Nl80TXR1U0c4UkhobEtPVW9yRFBuWkhlOWNTNHdtWWhMbGN5cnpsTV9lckxQSUZSbVJVRmM3VHZpUnVPSDFWcWt1UEpKcjhLMGVmcEpKME9PUmJ3WS5LVGR4ZDM1RHdmUjFOcDVFMFA0cGFpdEx1MG8uVXdxMllnBjoGRUY%3D--1e39d5e25b0fba0723b3089d5060e73a59b12850;
+        path=/; HttpOnly
+      X-Request-Id:
+      - eec3e2406fae4752a1e5c7cab0ce7c4e
+      X-Runtime:
+      - '0.539469'
+      Connection:
+      - close
+      Server:
+      - thin 1.5.1 codename Straight Razor
+    body:
+      encoding: UTF-8
+      string: "{\"id\":2,\"name\":\"Bob Martin\",\"sortable_name\":\"Martin, Bob\",\"short_name\":\"Bob
+        Martin\",\"sis_user_id\":\"2\",\"sis_login_id\":\"bob@martin.com\",\"sis_import_id\":null,\"login_id\":\"bob@martin.com\",\"locale\":null}"
+    http_version: 
+  recorded_at: Mon, 24 Feb 2014 03:02:58 GMT
+recorded_with: VCR 2.8.0

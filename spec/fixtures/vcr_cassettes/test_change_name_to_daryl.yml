@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: http://localhost:3000/api/v1/users/1
+    body:
+      encoding: US-ASCII
+      string: user[name]=Daryl&user[short_name]=Billy%20Bob&user[sortable_name]=Bob%2C%20Billy
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer 5h98vhxHhFSF4zkpjN5UCTdATtRDP34ANHaMhSgFSgDihRy1HFXnyg4I4s2bLJ94
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Content-Length:
+      - '80'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Canvas-User-Id:
+      - '1'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - "\"a54565a7b18af06eb844e86ecd961b91\""
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 8e164a8d52d474075626cf34e870d579
+      X-Request-Context-Id:
+      - e758a200-7f92-0131-3f49-542696d0ab77
+      Set-Cookie:
+      - _normandy_session=BAhJIgJQAS1qZms5NU45XzNrRkxiRTFpOUZXN0EgRFhtYXoydVY2Vk5HR1JyTk1ITU1hWjBlU214TzJUMEhfaTZySHhwd0d4U05ZbGN1bk5zakdIYUo5NlRhcnVXRlFhSVJ2S0tKQnc1STg2M016SmVDbTJvc3VKQXAtRjJVWWItd1ltNmJmQWNETGU0ek1jdVQtTUpMZ0QzN2MySWstNF9qcnR6Y3R3bFk3U2NyVEdqdnZoM3kxTlo3S09DcUlyd2piTFFjanhJemFzWFFfZkxmWDZhSC1EZ05KN3lLM2xlSlp1dmNRaFpYZFlQdTljcV8wUFNYYW81ZVlRbmtteGY3Yk5Sd1FLUlZxOG5ZNnNPT2tza1oxZVUyb0FOcUx2T2liUjZUS3RacW5BaEdHMjNwZmcua2hvTDVZUVNNUm9nbkh3M1h0ZURnRk95a2pvLlV3dGZoZwY6BkVG--3722a791ca72d9aec3b887d05c64b232eb8d09fc;
+        path=/; HttpOnly
+      X-Request-Id:
+      - 1aa11428c26a8c4ad3df67d2d51ad53f
+      X-Runtime:
+      - '0.118657'
+      Connection:
+      - close
+      Server:
+      - thin 1.5.1 codename Straight Razor
+    body:
+      encoding: UTF-8
+      string: "{\"id\":1,\"name\":\"Daryl\",\"sortable_name\":\"Bob, Billy\",\"short_name\":\"Billy
+        Bob\",\"sis_user_id\":\"SIS1\",\"sis_login_id\":\"david@gorges.us\",\"sis_import_id\":null,\"login_id\":\"david@gorges.us\",\"locale\":null}"
+    http_version: 
+  recorded_at: Mon, 24 Feb 2014 15:04:38 GMT
+recorded_with: VCR 2.8.0

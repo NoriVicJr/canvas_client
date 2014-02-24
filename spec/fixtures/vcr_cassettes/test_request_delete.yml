@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: delete
+    uri: http://localhost:3000/api/v1/accounts/1/users/2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer 5h98vhxHhFSF4zkpjN5UCTdATtRDP34ANHaMhSgFSgDihRy1HFXnyg4I4s2bLJ94
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Canvas-User-Id:
+      - '1'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - "\"8bc0a456d1b915ac07fd847cd9a75829\""
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - fc90a24bd6f6d0087cfad201caa1fee6
+      X-Request-Context-Id:
+      - 39a28160-7f30-0131-3f49-542696d0ab77
+      Set-Cookie:
+      - _normandy_session=BAhJIgGlRTVVSmg1aVBkSG84b0lROUNaVFl1Zy44U1RmN1JGanlES0xTaGJ5Q2ROV09nd0dYN2MxcjZaT2xKZFFPNUNtYU9DcTRnYnhrbFVmNVMzbEx5bmpnTjBNOHpPZ0QyVS1UMEZGZWpRWjBvODFkWDE5cVF2MXV2cU1wZUlQdVFKT0p6MC5ad1pHMzhNYml2TkhUcWpZZEt5eWVjZXlObXMuVXdxNS1BBjoGRUY%3D--e1067e889d52fa257564e68e12a27fc2e5ecfa97;
+        path=/; HttpOnly
+      X-Request-Id:
+      - e37d5f5bb90ee82a575373d4cb4600fc
+      X-Runtime:
+      - '0.839131'
+      Connection:
+      - close
+      Server:
+      - thin 1.5.1 codename Straight Razor
+    body:
+      encoding: UTF-8
+      string: "{\"id\":2,\"name\":\"Bob Martin\",\"sortable_name\":\"Martin, Bob\",\"short_name\":\"Bob
+        Martin\"}"
+    http_version: 
+  recorded_at: Mon, 24 Feb 2014 03:18:16 GMT
+recorded_with: VCR 2.8.0
