@@ -1,6 +1,11 @@
 require 'bundler/setup'
 Bundler.require(:default)
 
+ENV['CODECLIMATE_REPO_TOKEN'] = 'bd5c92bc1f0abbde6243a32d57c201903978ae23312d7b8ace942950a5b2743a'
+
+require "codeclimate-test-reporter"
+CodeClimate::TestReporter.start
+
 require 'minitest/spec'
 require 'minitest-spec-context'
 require 'minitest/autorun'
