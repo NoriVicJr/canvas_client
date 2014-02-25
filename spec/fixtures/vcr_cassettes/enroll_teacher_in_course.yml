@@ -1,0 +1,59 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/courses/4/enrollments
+    body:
+      encoding: US-ASCII
+      string: enrollment[type]=TeacherEnrollment&enrollment[user_id]=1&enrollment[enrollment_state]=active
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer 5h98vhxHhFSF4zkpjN5UCTdATtRDP34ANHaMhSgFSgDihRy1HFXnyg4I4s2bLJ94
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Content-Length:
+      - '92'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Canvas-User-Id:
+      - '1'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - "\"0f66375d3e99eb5dc1e397c08ec2e49c\""
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 446533773fc23a84e8afdbf2c243f45a
+      X-Request-Context-Id:
+      - 47e24e80-8077-0131-c872-542696d0ab77
+      Set-Cookie:
+      - _normandy_session=BAhJIgIQAXpIbm4xT21NZlFwOWt2WUw2ZzltY3cua3BKbDNOM0RSaERYN3ZLQzJBSnlrZmZYTTZqRk8wMnJXSHVHS2NDNnBCTmN4OGN5MFU5SGt5OVdTUmI5R1JweTNWckVCMjBZLW9vVVIzdTltOXVVZnR6ZlNhQ2ZadlZEVFAteHViaGV0TFU0MzZSZ2VVOXdyNW9PSmJCNVB5di1DTlRUb05EQm9md3djY1BRRjJUbHZZU01uSmNlaFloVFk5RnFvYm9wYVZaU2c5U21NRnhWU2JjVWdEd0QyTkxpajVZNTVPNHgycUhWQUdabnlZSDRDUS50Nk5UUHI2aVlMOEdpNkw1Z3FBNWc2QnFxWlUuVXd6ZXJRBjoGRUY%3D--41a2dca918d8e10575925139286cab322d8fa2e9;
+        path=/; HttpOnly
+      X-Request-Id:
+      - efb4a7318348e9924dc521c7be5a8e11
+      X-Runtime:
+      - '0.172840'
+      Connection:
+      - close
+      Server:
+      - thin 1.5.1 codename Straight Razor
+    body:
+      encoding: UTF-8
+      string: "{\"associated_user_id\":null,\"course_id\":4,\"course_section_id\":3,\"created_at\":\"2014-02-25T18:19:25Z\",\"end_at\":null,\"id\":4,\"limit_privileges_to_course_section\":false,\"root_account_id\":1,\"start_at\":null,\"type\":\"TeacherEnrollment\",\"updated_at\":\"2014-02-25T18:19:25Z\",\"user_id\":1,\"enrollment_state\":\"active\",\"role\":\"TeacherEnrollment\",\"last_activity_at\":null,\"sis_import_id\":null,\"html_url\":\"http://localhost:3000/courses/4/users/1\"}"
+    http_version: 
+  recorded_at: Tue, 25 Feb 2014 18:19:25 GMT
+recorded_with: VCR 2.8.0

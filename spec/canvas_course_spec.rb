@@ -73,6 +73,13 @@ describe Canvas::Course do
     end
   end
 
+  it 'should find the course by sis id' do
+    VCR.use_cassette('course found by sis id') do
+      course = Canvas::Course.find_by_sis_id '1'
+      course.wont_be_nil
+    end
+  end
+
   context '#enrollment' do
 
     before {
@@ -91,6 +98,12 @@ describe Canvas::Course do
     it 'should remove student from course' do
       VCR.use_cassette('course remove student') do
         @course.remove_student(@student)
+      end
+    end
+
+    it 'should add teacher ot course' do
+      VCR.use_cassette('add teacher to course') do
+        @course.add_teacher @student
       end
     end
 

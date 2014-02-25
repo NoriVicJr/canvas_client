@@ -1,0 +1,62 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/courses?
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer 5h98vhxHhFSF4zkpjN5UCTdATtRDP34ANHaMhSgFSgDihRy1HFXnyg4I4s2bLJ94
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Canvas-User-Id:
+      - '1'
+      Link:
+      - "<http://localhost:3000/api/v1/courses?page=1&per_page=10>; rel=\"current\",<http://localhost:3000/api/v1/courses?page=1&per_page=10>;
+        rel=\"first\",<http://localhost:3000/api/v1/courses?page=1&per_page=10>; rel=\"last\""
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - "\"003570f2c965a27098d7a78de6240e3f\""
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 8ee4cc3806f1fc8f4c7a6467bdccf617
+      X-Request-Context-Id:
+      - 7a0081e0-8077-0131-c872-542696d0ab77
+      Set-Cookie:
+      - _normandy_session=BAhJIgGlT1VZZHZJbkR0enVTWmFidXZaVzM4Zy5veE11OVJSVVhjZXJOSDhUYl9XZkJGdmxNalpKamZfc1gzVzY4MWdqakdTT2hxdEZJcGZGME1tUnVhb3hlaTZZeHp0Qlc3Z25sRkN4cTltZ0Q3WEFxZTlrcHRiMXNFTjRTUHBjZWg2ejBkVS44Q1Z5dFVwTnFiTGVldWZYLWVEbTUzYnZkOTguVXd6ZkFRBjoGRUY%3D--d0d06dbc2bb98a9c87018b8bec7037a49ea56d5c;
+        path=/; HttpOnly
+      X-Request-Id:
+      - b042fad76cee25bdb3c984dde9f984bb
+      X-Runtime:
+      - '0.350992'
+      Connection:
+      - close
+      Server:
+      - thin 1.5.1 codename Straight Razor
+    body:
+      encoding: UTF-8
+      string: "[{\"account_id\":1,\"course_code\":\"Beginning\",\"default_view\":\"feed\",\"id\":1,\"name\":\"Beginning
+        PE\",\"start_at\":null,\"end_at\":null,\"public_syllabus\":false,\"storage_quota_mb\":500,\"apply_assignment_group_weights\":false,\"calendar\":{\"ics\":\"http://localhost:3000/feeds/calendars/course_8KK0UHsRM8CIsRzSry1D0xzPu5ap6W7AGLe8y07e.ics\"},\"sis_course_id\":null,\"enrollments\":[{\"type\":\"teacher\",\"role\":\"TeacherEnrollment\"}],\"hide_final_grades\":false,\"workflow_state\":\"available\"},{\"account_id\":1,\"course_code\":\"BASKET1010\",\"default_view\":\"feed\",\"id\":4,\"name\":\"Basketweaving
+        Tech\",\"start_at\":null,\"end_at\":null,\"public_syllabus\":false,\"storage_quota_mb\":500,\"apply_assignment_group_weights\":false,\"calendar\":{\"ics\":\"http://localhost:3000/feeds/calendars/course_iNB8djOVDja2f46PtCSOmieEgc2TcmzpAjehU94R.ics\"},\"sis_course_id\":\"1\",\"enrollments\":[{\"type\":\"teacher\",\"role\":\"TeacherEnrollment\"}],\"hide_final_grades\":false,\"workflow_state\":\"unpublished\"}]"
+    http_version: 
+  recorded_at: Tue, 25 Feb 2014 18:20:49 GMT
+recorded_with: VCR 2.8.0

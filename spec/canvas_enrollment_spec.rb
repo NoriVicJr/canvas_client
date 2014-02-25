@@ -9,6 +9,13 @@ describe Canvas::Enrollment do
     end
   end
 
+  it 'adds a teacher to a course' do
+    VCR.use_cassette('enroll teacher in course') do
+      enrollment = Canvas::Enrollment.add_teacher_to_course(teacher_id: 1, course_id: 4)
+      enrollment.id.wont_be_nil
+    end
+  end
+
   it 'loads enrollments for course' do
     VCR.use_cassette('course enrollments') do
       course = Canvas::Course.find 2

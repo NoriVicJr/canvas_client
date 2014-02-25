@@ -17,7 +17,11 @@ class Canvas::Course < Canvas::Model
   # Find the course by its course code. This only returns courses in which the API user is enrolled.
   # That is why all courses created through the Canvas Client add the API user as a teacher.
   def self.find_by_code(code)
-    all.detect {|course| course['course_code'] == code }
+    all.detect { |course| course['course_code'] == code }
+  end
+
+  def self.find_by_sis_id(sis_id)
+    all.detect { |course| course['sis_course_id'] == sis_id }
   end
 
   def self.base_url
@@ -79,6 +83,10 @@ class Canvas::Course < Canvas::Model
 
   def add_student(student)
     Canvas::Enrollment.add_student_to_course student_id: student.id, course_id: id
+  end
+
+  def add_teacher(teacher)
+    Canvas::Enrollment.add_teacher_to_course teacher_id: teacher.id, course_id: id
   end
 
   def remove_student(student)

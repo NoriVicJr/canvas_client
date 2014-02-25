@@ -32,13 +32,25 @@ class Canvas::Enrollment < Canvas::Model
     raw_items ? raw_items.map {|item| new(item) } : []
   end
 
-  def self.add_student_to_course(student_id: nil, course_id: nil)
-    model = new type: 'StudentEnrollment',
+  def self.add_person_to_course(user_id: nil, course_id: nil, type: nil)
+    model = new type: type,
                 enrollment_state: 'active',
                 course_id: course_id,
-                user_id: student_id
+                user_id: user_id
     model.save
     model
+  end
+
+  def self.add_student_to_course(student_id: nil, course_id: nil)
+    add_person_to_course user_id: student_id,
+                         course_id: course_id,
+                         type: 'StudentEnrollment'
+  end
+
+  def self.add_teacher_to_course(teacher_id: nil, course_id: nil)
+    add_person_to_course user_id: teacher_id,
+                         course_id: course_id,
+                         type: 'TeacherEnrollment'
   end
 
 end
