@@ -33,17 +33,18 @@ class Canvas::Course < Canvas::Model
   end
 
   def create_params
-    {
+    params = {
       course: {
         sis_course_id: sis_course_id,
         name: name,
         course_code: course_code,
-        start_at: start_at,
-        end_at: end_at,
-        offer: offer,
         enroll_me: true
       }
     }
+    params.merge!(offer: offer) unless offer.nil?
+    params.merge!(start_at: start_at) unless start_at.nil?
+    params.merge!(end_at: end_at) unless end_at.nil?
+    params
   end
 
   def update_params
