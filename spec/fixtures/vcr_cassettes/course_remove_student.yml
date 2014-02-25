@@ -1,0 +1,117 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/courses/2/enrollments?
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer 5h98vhxHhFSF4zkpjN5UCTdATtRDP34ANHaMhSgFSgDihRy1HFXnyg4I4s2bLJ94
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Canvas-User-Id:
+      - '1'
+      Link:
+      - "<http://localhost:3000/api/v1/courses/2/enrollments?page=1&per_page=10>;
+        rel=\"current\",<http://localhost:3000/api/v1/courses/2/enrollments?page=1&per_page=10>;
+        rel=\"first\",<http://localhost:3000/api/v1/courses/2/enrollments?page=1&per_page=10>;
+        rel=\"last\""
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - "\"1d19f13c585bc41b35811310d04c937d\""
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 7ad2bde9dc1ec27b9284a079dc764cf6
+      X-Request-Context-Id:
+      - 15a65890-8062-0131-c872-542696d0ab77
+      Set-Cookie:
+      - _normandy_session=BAhJIgIQAWc0OFpEYTkwTGEtS3hsYUpKeEtvUUEuTi0wcHZMNldUQmdlT2NOSy1BcWlET182VlR6Q1pTaVBEVXFLX1NtSWVoX0gxRDl2OTlSc1NwWktZdnFwQ1F5cF9aX2hMc09BTTNoYkwzQUwxS2MyenY0SnlMeDhIRGJKcUg5aFgyVEloQWhCaFNKMWJOV2syX1AzdUc1UVY0UGZTNWl2SmZYeWNqMms2c2F6eDdVTHg4bUtCUjRzamNyUDlkS0k3WUZOR2lsaXlBSEV3WjVZc1Y3dVV3YXBPOTd1Yzdxb0x5UFRTNDNkcGl6YjJtNmROZy4zSUV1cXZidGZMc2hvUWppSldGLW9vQ2RwTUkuVXd5N0hRBjoGRUY%3D--1faeb048c043cf6ba3dc64abf47808c019c2d674;
+        path=/; HttpOnly
+      X-Request-Id:
+      - b30367a1a5855d92d159d3f58c6ca46c
+      X-Runtime:
+      - '0.214094'
+      Connection:
+      - close
+      Server:
+      - thin 1.5.1 codename Straight Razor
+    body:
+      encoding: UTF-8
+      string: "[{\"associated_user_id\":null,\"course_id\":2,\"course_section_id\":2,\"created_at\":\"2014-02-24T20:37:22Z\",\"end_at\":null,\"id\":2,\"limit_privileges_to_course_section\":false,\"root_account_id\":1,\"start_at\":null,\"type\":\"StudentEnrollment\",\"updated_at\":\"2014-02-24T20:37:22Z\",\"user_id\":2,\"enrollment_state\":\"active\",\"role\":\"StudentEnrollment\",\"last_activity_at\":null,\"sis_import_id\":null,\"grades\":{\"html_url\":\"http://localhost:3000/courses/2/grades/2\",\"current_score\":null,\"final_score\":null,\"current_grade\":null,\"final_grade\":null},\"html_url\":\"http://localhost:3000/courses/2/users/2\",\"user\":{\"id\":2,\"name\":\"Bob
+        Martin\",\"sortable_name\":\"Martin, Bob\",\"short_name\":\"Bob Martin\",\"sis_user_id\":\"SIS2\",\"sis_login_id\":\"bob@martin.com\",\"sis_import_id\":null,\"login_id\":\"bob@martin.com\"}}]"
+    http_version: 
+  recorded_at: Tue, 25 Feb 2014 15:47:41 GMT
+- request:
+    method: delete
+    uri: http://localhost:3000/api/v1/courses/2/enrollments/2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer 5h98vhxHhFSF4zkpjN5UCTdATtRDP34ANHaMhSgFSgDihRy1HFXnyg4I4s2bLJ94
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Canvas-User-Id:
+      - '1'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - "\"0eaee55162b550781e3c7405ce0c6492\""
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 710a31340c73895829758f090ec0ed7d
+      X-Request-Context-Id:
+      - 15c7e4f0-8062-0131-c872-542696d0ab77
+      Set-Cookie:
+      - _normandy_session=BAhJIgIQAWoxQTJxZlp5cTk5aWhTYWJWQS1yS0EuTmVHUXp6dURIOXJCRkhzbF95MXFpUm1rclJNY0hick9HbEN2UmFCRkFRaTBNS01pUXNqVzJ2dmp6MXBGckxyNjVfZ0NXOF9wdkxHc0pUV2xVSko2OVZCQVMyTWpwYmp5Uzdkb2NuUEdsMDk4dXpmcmN6RTQ3X2JCR1dBNjgwYUJxUm04NDFJanlNS3VhV3MyaXVsM1JCZ0tVdUdGQWE3aTk2bFgtSklkY3VwMThHQVBQaG93V043Ri03aDkwYnZ1N3k3cW9ZdV9pakNRVGpjVi05NmpBUS5sUUFTLVBmUHNPTkJfaDE3Qm9sVXVzQUZnS1kuVXd5N0hnBjoGRUY%3D--d15b1bbfae212e87a3601014a3cc2a85e1e47c48;
+        path=/; HttpOnly
+      X-Request-Id:
+      - 2af48cff91b2514b374404b2afec63ce
+      X-Runtime:
+      - '0.183461'
+      Connection:
+      - close
+      Server:
+      - thin 1.5.1 codename Straight Razor
+    body:
+      encoding: UTF-8
+      string: "{\"associated_user_id\":null,\"course_id\":2,\"course_section_id\":2,\"created_at\":\"2014-02-24T20:37:22Z\",\"end_at\":null,\"id\":2,\"limit_privileges_to_course_section\":false,\"root_account_id\":1,\"start_at\":null,\"type\":\"StudentEnrollment\",\"updated_at\":\"2014-02-25T15:47:42Z\",\"user_id\":2,\"enrollment_state\":\"completed\",\"role\":\"StudentEnrollment\",\"last_activity_at\":null,\"sis_import_id\":null,\"grades\":{\"html_url\":\"http://localhost:3000/courses/2/grades/2\",\"current_score\":null,\"final_score\":null,\"current_grade\":null,\"final_grade\":null},\"html_url\":\"http://localhost:3000/courses/2/users/2\"}"
+    http_version: 
+  recorded_at: Tue, 25 Feb 2014 15:47:42 GMT
+recorded_with: VCR 2.8.0

@@ -9,19 +9,19 @@ class Canvas::Course < Canvas::Model
   attribute :offer, Boolean
   attribute :open_enrollment, Boolean
   attribute :self_enrollment, Boolean
-  
+
   def students
     @students ||= Canvas::Enrollment.for_course(self).select &:student?
   end
-  
+
   def self.base_url
     'courses'
   end
-  
+
   def create_url
     File.join 'accounts', client.account, 'courses'
   end
-  
+
   def create_params
     {
       course: {
@@ -34,31 +34,40 @@ class Canvas::Course < Canvas::Model
       }
     }
   end
-  
+
   def update_params
     create_params
   end
-  
+
   def destroy
     client.delete(resource_url + '?event=delete') and freeze
   end
-  
+
   def conclude
     client.delete(resource_url + '?event=conclude') and freeze
   end
-  
+
   def open
     self.self_enrollment = true
     self.open_enrollment = true
     self.offer = true
     save
   end
-  
+
   def close
     self.self_enrollment = false
     self.open_enrollment = false
     self.offer = false
     save
   end
-  
+
+  def add_student(student)
+    Canvas::Enrollment.add_student_to_course student_id: student.id, course_id: id
+  end
+
+  def remove_student(student)
+    enrollment = students.detect { |item| item.user_id == student.id }
+    enrollment.destroy if enrollment
+  end
+
 end

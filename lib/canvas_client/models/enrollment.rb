@@ -3,15 +3,19 @@ class Canvas::Enrollment < Canvas::Model
   attribute :course_id, Integer
   attribute :user_id, Integer
   attribute :enrollment_state, String
-  
+
   def student?
     type == 'StudentEnrollment'
   end
-  
+
   def base_url
     File.join 'courses', course_id.to_s, 'enrollments'
   end
-  
+
+  def destroy_url
+    File.join base_url, id.to_s
+  end
+
   def create_params
     {
       enrollment: {
@@ -21,20 +25,20 @@ class Canvas::Enrollment < Canvas::Model
       }
     }
   end
-  
+
   def self.for_course(course)
     url = File.join course.resource_url, 'enrollments'
     raw_items = client.get url
     raw_items ? raw_items.map {|item| new(item) } : []
   end
-  
+
   def self.add_student_to_course(student_id: nil, course_id: nil)
-    model = new type: 'StudentEnrollment', 
+    model = new type: 'StudentEnrollment',
                 enrollment_state: 'active',
                 course_id: course_id,
                 user_id: student_id
     model.save
     model
   end
-  
+
 end

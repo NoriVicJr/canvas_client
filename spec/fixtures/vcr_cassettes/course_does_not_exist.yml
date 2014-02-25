@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/courses/42?
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer 5h98vhxHhFSF4zkpjN5UCTdATtRDP34ANHaMhSgFSgDihRy1HFXnyg4I4s2bLJ94
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      X-Canvas-User-Id:
+      - '1'
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Cache-Control:
+      - no-cache
+      X-Session-Id:
+      - 80cfe4edac9a3007847a1cc06f5a6c36
+      X-Request-Context-Id:
+      - abe525a0-805f-0131-c872-542696d0ab77
+      Set-Cookie:
+      - _normandy_session=BAhJIgGldWJya2dTS053bmllMGFBWkRpTzhPUS5jbndCSGZZQUItdkFYb2FZcE9id0tMMFdMZ0tBVDNCaWxrQzRzYnJEM04tZTJIakg0ZV9FTmEycm50MjJtN2FyanR6SXpKTU9BZlBBWm1BOXhObVFLMGVGb1NpenBJZDd0eFB2Qkh3OWxJOC5xVkJxN1l1S0lvbS1jUkhhS2taTFFiU2pTYmMuVXd5M0VnBjoGRUY%3D--8fa0696749b92f7b36e2ed9b2a38d2bc94ab2541;
+        path=/; HttpOnly
+      X-Request-Id:
+      - 27b659f7fd777f4b19c26b1bfad99074
+      X-Runtime:
+      - '1.752925'
+      Connection:
+      - close
+      Server:
+      - thin 1.5.1 codename Straight Razor
+    body:
+      encoding: UTF-8
+      string: "{\"status\":\"not_found\",\"message\":\"The specified resource does
+        not exist.\",\"error_report_id\":10}"
+    http_version: 
+  recorded_at: Tue, 25 Feb 2014 15:30:26 GMT
+recorded_with: VCR 2.8.0
