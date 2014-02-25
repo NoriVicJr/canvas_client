@@ -66,11 +66,20 @@ describe Canvas::Course do
     end
   end
 
+  it 'should find the course by course code' do
+    VCR.use_cassette('course found by code') do
+      course = Canvas::Course.find_by_code 'Beginning'
+      course.wont_be_nil
+    end
+  end
+
   context '#enrollment' do
 
     before {
-      @course = Canvas::Course.find 2
-      @student = Canvas::User.find 2
+      VCR.use_cassette('load_course_and_student') do
+        @course = Canvas::Course.find 2
+        @student = Canvas::User.find 2
+      end
     }
 
     it 'should add student to course' do

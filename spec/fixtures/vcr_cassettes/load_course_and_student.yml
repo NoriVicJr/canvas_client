@@ -1,0 +1,118 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/courses/2?
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer 5h98vhxHhFSF4zkpjN5UCTdATtRDP34ANHaMhSgFSgDihRy1HFXnyg4I4s2bLJ94
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Canvas-User-Id:
+      - '1'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - "\"630286be1169f698806d658915b2dbd4\""
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 230f244979e7baee3d15b71b11334158
+      X-Request-Context-Id:
+      - 926f3cc0-806d-0131-c872-542696d0ab77
+      Set-Cookie:
+      - _normandy_session=BAhJIgGldEE4S181STdWSjRLS2NOajhsUnVSUS5rWnd6cnQ5Uk9UOEIzZXJhTFdXQTVXTUhaeGdwY1BkYmtWMjQyQ2NYeGpwN05fMXBUOXAtRGJfNFVlMDNCOHNCV0JTQjl3di1LWGpBcVJURWNVTWsxTHU4NzRIeHc2WXMzaThkRDEwbTZ4OC5KU24yNHF0WXZJaE12SDJFVWlWZzU2SFFQcFEuVXd6T1l3BjoGRUY%3D--00d6c13a666f21a8f47b17a683c94be875bc5912;
+        path=/; HttpOnly
+      X-Request-Id:
+      - 75848f3defd7c0b17f6ffb2477986573
+      X-Runtime:
+      - '0.062408'
+      Connection:
+      - close
+      Server:
+      - thin 1.5.1 codename Straight Razor
+    body:
+      encoding: UTF-8
+      string: "{\"account_id\":1,\"course_code\":\"BASKET101\",\"default_view\":\"feed\",\"id\":2,\"name\":\"Intermediate
+        Basketweaving\",\"start_at\":null,\"end_at\":null,\"public_syllabus\":false,\"storage_quota_mb\":500,\"hide_final_grades\":false,\"apply_assignment_group_weights\":false,\"calendar\":{\"ics\":\"http://localhost:3000/feeds/calendars/course_95WyE6O2lHZf4LotSq3qF0TfC7NURGr23rB3B8g3.ics\"},\"sis_course_id\":\"2\",\"enrollments\":[],\"workflow_state\":\"available\"}"
+    http_version: 
+  recorded_at: Tue, 25 Feb 2014 17:09:55 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/accounts/1/users?search_term=2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer 5h98vhxHhFSF4zkpjN5UCTdATtRDP34ANHaMhSgFSgDihRy1HFXnyg4I4s2bLJ94
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Canvas-User-Id:
+      - '1'
+      Link:
+      - "<http://localhost:3000/api/v1/accounts/1/users?search_term=2&page=1&per_page=10>;
+        rel=\"current\",<http://localhost:3000/api/v1/accounts/1/users?search_term=2&page=1&per_page=10>;
+        rel=\"first\",<http://localhost:3000/api/v1/accounts/1/users?search_term=2&page=1&per_page=10>;
+        rel=\"last\""
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - "\"e79727d1f8b2e9a954331ce72bcdcfc8\""
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Session-Id:
+      - 89e8d44a6b434e56d385410d032c963c
+      X-Request-Context-Id:
+      - 92795a50-806d-0131-c872-542696d0ab77
+      Set-Cookie:
+      - _normandy_session=BAhJIgIQAU1vLW12RmczdmZNZEhmWUgwdHg4dFEuZWhOQ2Z1SktieWNHcjN0dU84SG12TC1VQlliZGlUY0ZtSVUwOWZEYTVuTkRLNzNYUVVNV29nMkFwODJRQnVCSjBRRGhDUDFxUXliZC11YWZuVTlYbWNNY0xwMF9WdkJYQ1VEdDBocVJ6RVV6WENrOFFVMGdWTHMwckNPVzlwUkdjMHFUcVgwYXJ2bmFJTl9QNlV1QUNnSU5jSjN0TnczV2p5R2o3WlNDSnliZ245TEJxM0VmSVcxcnM4RXJsUFZuWG1LNTY5dU9uNjFtY0EyUXNrbHNxQS5pTWJBMlhnZlB1Q01XNW1kY3pUOWtfb3d4M1UuVXd6T1l3BjoGRUY%3D--b301d15ded6c4e7e9289b3ef69fb184c46ade09b;
+        path=/; HttpOnly
+      X-Request-Id:
+      - 84c61c3a02ca91e47a55d111ce35fd47
+      X-Runtime:
+      - '0.179570'
+      Connection:
+      - close
+      Server:
+      - thin 1.5.1 codename Straight Razor
+    body:
+      encoding: UTF-8
+      string: "[{\"id\":2,\"name\":\"Bob Martin\",\"sortable_name\":\"Martin, Bob\",\"short_name\":\"Bob
+        Martin\",\"sis_user_id\":\"SIS2\",\"sis_login_id\":\"bob@martin.com\",\"sis_import_id\":null,\"login_id\":\"bob@martin.com\"}]"
+    http_version: 
+  recorded_at: Tue, 25 Feb 2014 17:09:55 GMT
+recorded_with: VCR 2.8.0

@@ -21,6 +21,10 @@ class Canvas::Model
     id.nil?
   end
 
+  def self.all
+    client.get self.base_url
+  end
+
   def self.find(id)
     record = client.get(resource_url(id))
     return record.nil? ? nil : new(record)

@@ -14,6 +14,12 @@ class Canvas::Course < Canvas::Model
     @students ||= Canvas::Enrollment.for_course(self).select &:student?
   end
 
+  # Find the course by its course code. This only returns courses in which the API user is enrolled.
+  # That is why all courses created through the Canvas Client add the API user as a teacher.
+  def self.find_by_code(code)
+    all.detect {|course| course['course_code'] == code }
+  end
+
   def self.base_url
     'courses'
   end
@@ -30,7 +36,8 @@ class Canvas::Course < Canvas::Model
         course_code: course_code,
         start_at: start_at,
         end_at: end_at,
-        offer: offer
+        offer: offer,
+        enroll_me: true
       }
     }
   end
