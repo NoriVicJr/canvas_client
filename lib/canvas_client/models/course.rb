@@ -43,7 +43,16 @@ class Canvas::Course < Canvas::Model
   end
 
   def update_params
-    create_params
+    {
+        course: {
+            sis_course_id: sis_course_id,
+            name: name,
+            course_code: course_code,
+            start_at: start_at,
+            end_at: end_at,
+            offer: offer
+        }
+    }
   end
 
   def destroy
